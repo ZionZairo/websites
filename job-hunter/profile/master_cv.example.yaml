@@ -1,0 +1,85 @@
+# MASTER CV — your single source of truth.
+# Copy to profile/master_cv.yaml (git-ignored) and replace everything below with your real details.
+#
+# Put EVERYTHING here: every role, duty, project, tool and achievement — even small ones.
+# Tailoring picks the most relevant items for each advert and rewords them in the advert's
+# language, but it can only use what is written here. More raw material = better tailoring.
+# Include numbers wherever true (volumes, % improvements, team sizes) — they cannot be invented later.
+
+contact:
+  name: Thabo Example
+  email: thabo.example@email.com
+  phone: "+27 82 000 0000"
+  location: Johannesburg, Gauteng
+  linkedin: linkedin.com/in/thabo-example
+
+headline: Logistics and Supply Chain Management Graduate
+
+summary: >
+  Logistics and Supply Chain Management graduate with hands-on warehouse and inventory experience,
+  strong Excel skills and a practical understanding of procurement and distribution operations.
+
+skills:
+  technical:
+    - Inventory Management
+    - Stock Control
+    - Procurement
+    - Warehouse Operations
+    - Distribution
+    - Demand Forecasting
+    - Data Analysis
+  tools:
+    - Advanced Excel
+    - Pivot Tables
+    - SAP
+    - Power BI
+  soft:
+    - Communication
+    - Problem Solving
+    - Attention to Detail
+    - Teamwork
+
+experience:
+  - title: Warehouse Assistant (Part-time)
+    company: Example Retail DC
+    location: Midrand
+    start: Jan 2024
+    end: Dec 2024
+    bullets:
+      - Conducted weekly stock counts across 1,200 SKUs and reconciled variances with the inventory controller
+      - Received and checked inbound deliveries against purchase orders and delivery notes
+      - Picked and packed customer orders, meeting daily dispatch cut-off times
+      - Followed health and safety procedures in a busy distribution centre
+  - title: Vacation Student
+    company: Example Freight Forwarders
+    location: Johannesburg
+    start: Dec 2023
+    end: Jan 2024
+    bullets:
+      - Prepared shipping documents and tracked import consignments for the clearing team
+      - Built an Excel tracker that reduced late document follow-ups by 30%
+      - Answered customer queries on shipment status by phone and email
+
+projects:
+  - name: Final-year project — Inventory optimisation for a retail SME
+    year: 2024
+    bullets:
+      - Analysed 12 months of sales data in Excel to classify stock using ABC analysis
+      - Recommended reorder points that cut projected stock-outs by 18%
+
+education:
+  - qualification: BCom Logistics and Supply Chain Management
+    institution: Example University
+    year: 2024
+    details:
+      - "Relevant modules: Procurement, Operations Management, Transport Economics, Business Statistics"
+
+certifications:
+  - {name: Lean Six Sigma White Belt, issuer: Example Institute, year: 2024}
+
+extras:
+  languages: [English, isiZulu, Sesotho]
+  drivers_licence: Code 08
+  availability: Immediately
+
+references: Available on request

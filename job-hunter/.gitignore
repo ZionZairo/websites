@@ -1,0 +1,9 @@
+# Personal data — never commit your real CV, config keys, or generated CVs
+config.yaml
+profile/master_cv.yaml
+output/
+data/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/

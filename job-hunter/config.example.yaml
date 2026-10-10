@@ -1,0 +1,57 @@
+# Copy to config.yaml and edit. config.yaml is git-ignored.
+# API keys are NOT stored here — set them as environment variables (see README).
+
+search:
+  # Each query is searched in each location.
+  queries:
+    - logistics graduate
+    - supply chain graduate programme
+    - supply chain internship
+    - logistics internship
+    - logistics learnership
+    - supply chain learnership
+    - procurement graduate
+    - warehouse trainee
+    - junior logistics coordinator
+    - junior buyer
+  locations: ["Gauteng", "Western Cape", "KwaZulu-Natal"]   # use [""] for nationwide
+  max_days_old: 14
+
+  # Which opportunity types to keep.
+  categories: [graduate_programme, internship, learnership, job]
+
+  # 0-100: how strongly the posting must match logistics/SCM terms to be kept.
+  min_relevance: 30
+
+  # Titles containing any of these words are dropped (keeps results entry-level).
+  exclude_title_words: [senior, manager, head, director, principal, lead, chief, executive, "5+ years"]
+
+  # Optional: override the field vocabulary used for relevance scoring.
+  # field_terms: [logistics, supply chain, procurement, ...]
+
+sources:
+  adzuna:
+    country: za
+    pages: 1
+    results_per_page: 50
+
+  # Employers to watch directly. Their feeds give the FULL advert (best tailoring).
+  # Find the slug in the company's careers URL, e.g.
+  #   boards.greenhouse.io/<slug>   jobs.lever.co/<slug>   jobs.smartrecruiters.com/<slug>
+  companies:
+    # - {name: "Example Co", platform: greenhouse, slug: exampleco}
+    # - {name: "Example Co", platform: lever, slug: exampleco}
+    # - {name: "Example Co", platform: smartrecruiters, slug: ExampleCo}
+
+tailor:
+  engine: claude              # claude | keywords (offline, reorders only)
+  model: claude-sonnet-5-5
+  keywords: 25                # ATS keywords extracted per advert
+  bullets_per_role: 4         # keywords engine only
+  auto_tailor_top: 5          # `run` tailors this many of the best new matches
+
+paths:
+  master_cv: profile/master_cv.yaml
+  database: data/jobs.db
+  output: output
+  tracker_csv: data/tracker.csv
