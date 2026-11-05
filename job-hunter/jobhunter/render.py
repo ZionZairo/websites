@@ -63,13 +63,19 @@ def build_sections(master: dict, tailored: dict, category: str) -> list[tuple[st
         sections.append(("CERTIFICATIONS", [("bullet", x) for x in certs]))
 
     extras = master.get("extras") or {}
-    extra_lines = [("bullet", f"{k.replace('_', ' ').title()}: {', '.join(v) if isinstance(v, list) else v}")
+    extra_lines = [("bullet", f"{_label(k)}: {', '.join(v) if isinstance(v, list) else v}")
                    for k, v in extras.items() if v]
     if extra_lines:
         sections.append(("ADDITIONAL INFORMATION", extra_lines))
     if master.get("references"):
         sections.append(("REFERENCES", [master["references"]]))
     return sections
+
+
+def _label(key: str) -> str:
+    """drivers_licence -> Drivers licence; keeps apostrophes intact (no .title())."""
+    text = key.replace("_", " ")
+    return text[:1].upper() + text[1:]
 
 
 def contact_line(master: dict) -> str:
