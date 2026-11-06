@@ -30,7 +30,8 @@ def build_sections(master: dict, tailored: dict, category: str) -> list[tuple[st
 
     edu_lines: list = []
     for e in master.get("education") or []:
-        edu_lines.append(("role", f"{e.get('qualification', '')} — {e.get('institution', '')}", str(e.get("year", ""))))
+        head = " — ".join(x for x in (e.get("qualification", ""), e.get("institution", "")) if x)
+        edu_lines.append(("role", head, str(e.get("year", ""))))
         edu_lines.extend(("bullet", d) for d in e.get("details") or [])
 
     exp_lines: list = []
