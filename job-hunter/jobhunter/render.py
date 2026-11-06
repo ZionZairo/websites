@@ -25,6 +25,8 @@ def build_sections(master: dict, tailored: dict, category: str) -> list[tuple[st
     sections: list[tuple[str, list]] = []
 
     sections.append(("PROFESSIONAL SUMMARY", [tailored.get("summary", "")]))
+    if tailored.get("capabilities"):
+        sections.append(("CORE CAPABILITIES", [("bullet", c) for c in tailored["capabilities"]]))
     if tailored.get("skills"):
         sections.append(("KEY SKILLS", [" | ".join(tailored["skills"])]))
 
